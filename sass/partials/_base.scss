@@ -3,7 +3,6 @@ body{
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-//   padding: 0 4em;
   position: relative;
   // Temp until page longer
   min-height: 1000px;
@@ -17,28 +16,76 @@ html{
   box-sizing: inherit;
 }
 
-main{
-  padding: 4em;
+.container{
+  padding: 3em 4em;
+  @extend %clearfix;
 }
 
-p{
-  display: block;
-  float:left;
+.subtitle{
+  @include col(2);
+}
+
+.docs{
+  @include col(4, 4, omega);
+  
+  p{
+    @include col(4, 4, omega);
+    
+    @include breakpoint(700px){
+      @include col(1, 2);
+    }
+    
+    @include breakpoint(1000px){
+      @include col(2, 4);
+    }
+  }
+  
+  pre{
+    @include col(4, 4, omega);
+    
+    @include breakpoint(700px){
+      @include col(1, 2, omega);
+    }
+    @include breakpoint(1000px){
+      @include col(2, 4, omega);
+    }
+  }
+}
+
+.docs__setup{
+  
+}
+
+.docs__usage{
+  
+}
+
+.row{
+  clear:both;
+  @extend %clearfix;
+}
+
+.overlay__columns{
+    height: 100%;
+    outline: 1px solid lighten($orange, 13%);
+    outline-offset: -1px;
 }
 
 .overlay{
   @include col(4);
   @include omega;
+//   border: 1px solid lighten($orange, 25%);
+  padding: 3em 4em; 
   position: absolute;
-  height: 1000px;
-  padding: 4em;
   pointer-events: none;
   z-index: -1000;
+  bottom: 0;
+  top: 0;
 }
 
 .col{
   height: 100%;
-  border: 1px solid lighten($orange, 25%);
+  border: 1px solid lighten($orange, 13%);
   display: none;
   
   &:first-of-type{
@@ -91,12 +138,22 @@ p{
 }
 
 .author{
-  @include col(2);
-  @include omega;
+  @include col(2, 4, omega);
   margin-top: 0;
+  margin-bottom: 3em;
 }
 
 .intro{
-  @include col(2);
+  @include col(1, 1);
   @include omega;
+  
+  @include breakpoint(700px){
+    @include col(1, 2);
+    @include omega;
+  }
+  
+  @include breakpoint(1000px){
+    @include col(2);
+    @include omega;
+  }
 }

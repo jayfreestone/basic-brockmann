@@ -1,6 +1,6 @@
 body{
   font-family: "aktiv-grotesk-std",sans-serif;
-  font-size:1.3125em;
+  font-size: 1.667em;
   line-height: 1.3;
 }
 
@@ -9,4 +9,23 @@ h1{
   @include omega;
   font-size: 4em;
   line-height: 1.3;
+}
+
+/*
+h2{
+  margin-bottom: 5em;
+}
+*/
+
+a{
+  color: black;
+  
+  &:visited{
+    color: black;
+  }
+}
+
+code{
+  font-family: "source-code-pro";
+  font-size: .9em;
 }
