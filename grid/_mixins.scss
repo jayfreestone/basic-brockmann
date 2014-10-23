@@ -1,8 +1,14 @@
 //Grid Mixins
-@mixin col($columns, $maximum-columns:$maximum-columns) {  
+@mixin col($columns, $maximum-columns:$maximum-columns, $omega:false) {  
   width: columns($columns, $maximum-columns); 
-  margin-right: gutter();
-  float: left;
+
+  @if $omega == omega {
+    float: right;
+  }  
+  @else{
+    margin-right: gutter();
+    float: left;
+  }
 }
 
 @mixin omega {
