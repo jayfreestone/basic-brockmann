@@ -2,9 +2,10 @@
 
 
 // Grid
-@import "grid/_setup";
-@import "grid/_grid";
-@import "grid/_mixins.scss";
+@import "partials/_setup";
+@import "../grid/_grid";
+@import "../grid/_mixins.scss";
+@import "partials/_mixins";
 
 //Main
 @import "partials/_base";
