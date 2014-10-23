@@ -1,0 +1,13 @@
+{
+  "name": "TheBasicBrockmann",
+  "version": "0.1",
+  "ignore": [
+    "sass",
+    ".gitignore",
+    "config.codekit",
+    ".sass-cache",
+    "bower.json",
+    "package.json",
+    "README.md"
+  ],
+}
