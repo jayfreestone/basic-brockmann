@@ -1,0 +1,22 @@
+//Grid Mixins
+@mixin col($columns, $maximum-columns:$maximum-columns) {  
+  width: columns($columns, $maximum-columns); 
+  margin-right: gutter();
+  float: left;
+}
+
+@mixin omega {
+  float: right;
+  margin-right: 0;
+}
+
+@mixin push($from-direction, $columns) {
+  @if $from-direction == left {
+    float: left;
+    margin-left: offset-columns($columns);
+  }
+  @if $from-direction == right {
+    float: right;
+    margin-right: offset-columns($columns);
+  }
+}
