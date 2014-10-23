@@ -60,8 +60,11 @@ html{
   
 }
 
+header{
+  @include col(4, 4, omega);
+}
+
 .row{
-  clear:both;
   @extend %clearfix;
 }
 

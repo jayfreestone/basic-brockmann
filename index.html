@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<title>The Basic Brockmann</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A set of basic grid mixins written in SASS, for use with Libsass, owing to Steve Hickey.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css" title="Main CSS" type="text/css" media="screen" charset="utf-8">
 		<script src="//use.typekit.net/wyq5jza.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -16,12 +20,13 @@
     	  <div class="col"></div>
     	</div>
   	</div>
+  	
   	<div class="container">
-  	  <p class="author">Jay Freestone / <a href="http://www.twitter.com/jayfreestone">@jayfreestone</a></p>
-  	  <h1>The</br>Basic Brockmann</h1>
-  	  <p class="subtitle">for web designers</p>
-      <p class="intro">A set of basic grid mixins written in <a href="http://sass-lang.com/">SASS</a>, for use with <a href="https://github.com/sass/libsass">Libsass</a>, owing to <a href="http://stevehickeydesign.com">Steve Hickey.</a></p>
-
+  	  <header><p class="author">Jay Freestone / <a href="http://www.twitter.com/jayfreestone">@jayfreestone</a></p>
+  	    <h1>The</br>Basic Brockmann</h1>
+  	    <p class="subtitle">for web designers</p>
+  	          <p class="intro">A set of basic grid mixins written in <a href="http://sass-lang.com/">SASS</a>, for use with <a href="https://github.com/sass/libsass">Libsass</a>, owing to <a href="http://stevehickeydesign.com">Steve Hickey.</a></p>
+  	    </header>
 <div class="docs">
   <div class="docs__setup row">
     <h2 >Setup</h2>
@@ -86,7 +91,9 @@ aside {
       <p>Currently when passing in the <code>omega</code> flag the parent needs to be declared, ensuing <code>omega</code> is the last option passed into the mixin. This would, for instance, not be valid: <code>@include col(2, omega)</code>.</p>
     </div>
        </div>
-  </div>    
-  </div>	
+  </div> 
+  </div>
+      <footer><a href="http://www.jayfreestone.com">Jay Freestone</a> is a Graphic Designer & Front End Developer working out of London.</footer>  
+
   </body>
 </html>
