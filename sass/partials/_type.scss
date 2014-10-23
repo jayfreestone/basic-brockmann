@@ -1,3 +1,15 @@
+*{
+  text-rendering: optimizeLegibility;
+}
+
+*, *:after, *:before {
+  font-smoothing:antialiased;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing:antialiased;
+}
+
 body{
   font-family: "aktiv-grotesk-std",sans-serif;
   font-size: 1.667em;
