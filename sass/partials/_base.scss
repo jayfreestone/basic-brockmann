@@ -1,0 +1,58 @@
+body{
+  background-color: $orange;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+//   padding: 0 4em;
+  position: relative;
+  // Temp until page longer
+  min-height: 1000px;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main{
+  padding: 4em;
+}
+
+p{
+  display: block;
+  float:left;
+}
+
+.overlay{
+  @include col(4);
+  @include omega;
+  position: absolute;
+  height: 1000px;
+  padding: 4em;
+  pointer-events: none;
+  z-index: -1000;
+}
+
+.col{
+  @include col(1);
+  height: 100%;
+  border: 1px solid lighten($orange, 25%);
+  
+  &:nth-child(4n){
+    @include omega;
+  }
+}
+
+.author{
+  @include col(2);
+  @include omega;
+  margin-top: 0;
+}
+
+.intro{
+  @include col(2);
+  @include omega;
+}
