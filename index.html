@@ -9,15 +9,84 @@
 
 	<body>
 	 <div class="overlay">
-    	<div class="col"></div>
-    	<div class="col"></div>
-    	<div class="col"></div>
-    	<div class="col"></div>
+    	<div class="overlay__columns">
+    	  <div class="col"></div>
+    	  <div class="col"></div>
+    	  <div class="col"></div>
+    	  <div class="col"></div>
+    	</div>
   	</div>
-  	<main>
-  	  <p class="author">Jay Freestone</p>
-  	  <h1>Basic Brockmann</h1>
-      <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-    </main>	
+  	<div class="container">
+  	  <p class="author">Jay Freestone / <a href="http://www.twitter.com/jayfreestone">@jayfreestone</a></p>
+  	  <h1>The</br>Basic Brockmann</h1>
+  	  <p class="subtitle">for web designers</p>
+      <p class="intro">A set of basic grid mixins written in <a href="http://sass-lang.com/">SASS</a>, for use with <a href="https://github.com/sass/libsass">Libsass</a>, owing to <a href="http://stevehickeydesign.com">Steve Hickey.</a></p>
+
+<div class="docs">
+  <div class="docs__setup row">
+    <h2 >Setup</h2>
+    <p>Include <code>_grid.scss</code> &amp; <code>_mixins.scss</code> in your project, then declare these variables in a preceeding file:</p>
+    <pre><code>$max-width: 1360px;  
+$column-width: 6.38298%;  
+$gutter-width: 2.12766%;  
+$maximum-columns: 12;
+    </code></pre>
+  </div>
+  
+  <div class="docs__usage">
+    <h2>Usage</h2>
+    
+    <div class="row">
+      <p>Define the main container with the <code>%container</code> placeholder:</p>
+      
+      <pre><code>.container {  
+  @extend %container;  
+}
+      </code></pre>
+    </div>
+    
+    <div class="row">
+      <p>Then define the widths of elements with the <code>col</code> mixin:</p>
+      
+      <pre><code>main {  
+  @include col(8);  
+}
+      </code></pre>
+    </div>
+    
+    <p>By default <code>col</code> will assume the parent element contains the maxium number of columns specificed in <code>$maximum-columns</code> — in this example 12. If you are nesting elements and wish to instead declare how many columns the parent has you may pass in a second number:</p>
+    
+    <div class="row">
+      <pre><code>aside {  
+  @include col(2, 6);  
+}
+      </code></pre>
+      
+      <p>This translates to: ‘span two of six columns’.</p>
+    </div>
+    
+    <div class="row">
+      <p>The final column in a row must be declared by passing in the <code>omega</code> flag, or optionally using the <code>omega</code> mixin:</p>
+      
+      <pre><code>
+aside {  
+  @include col(2, 6, omega);  
+}
+
+// Or:
+
+aside {  
+  @include col(2, 6);  
+  @include omega;  
+}
+      </code></pre>
+      
+      <p>The first is prefferable as it avoids outputting CSS that will be rewritten.</p>
+      
+      <p>Currently when passing in the <code>omega</code> flag the parent needs to be declared, ensuing <code>omega</code> is the last option passed into the mixin. This would, for instance, not be valid: <code>@include col(2, omega)</code>.</p>
+    </div>
+       </div>
+  </div>    
+  </div>	
   </body>
 </html>
