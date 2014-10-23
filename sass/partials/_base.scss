@@ -37,12 +37,56 @@ p{
 }
 
 .col{
-  @include col(1);
   height: 100%;
   border: 1px solid lighten($orange, 25%);
+  display: none;
   
-  &:nth-child(4n){
+  &:first-of-type{
+    display:block;
+    @include col(1, 1);
     @include omega;
+  }
+
+  @include breakpoint(700px){
+    @include col(1);
+    display: block;
+    
+    &:first-of-type{
+      display:block;
+      @include col(1, 2);
+    }
+    
+    &:nth-of-type(2n){
+      display:block;
+      @include col(1, 2);
+      @include omega;
+    }
+    
+    &:nth-of-type(3n){
+      display: none;
+    }
+  }
+  
+  @include breakpoint(1000px){
+    
+    &:first-of-type{
+      display:block;
+      @include col(1);
+    }
+    
+    &:nth-of-type(2n){
+      display:block;
+      @include col(1);
+    }
+    
+    &:nth-of-type(3n){
+      display:block;
+      @include col(1);
+    }
+    
+    &:last-of-type{
+      @include omega;
+    }
   }
 }
 
