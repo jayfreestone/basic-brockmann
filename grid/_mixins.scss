@@ -1,6 +1,6 @@
 //Grid Mixins
-@mixin col($columns, $container-columns) {
-  width: columns($columns, $container-columns); 
+@mixin col($columns, $maximum-columns:$maximum-columns) {
+  width: columns($columns, $maximum-columns);
   margin-right: gutter();
   float: left;
 }
