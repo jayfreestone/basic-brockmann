@@ -49,6 +49,13 @@ code{
 
 }
 
+pre {
+  background-color: black;
+  color: $orange;
+  padding: 1em;
+  font-size: 80%;
+}
+
 ::selection{
   background-color: $orange;
 }

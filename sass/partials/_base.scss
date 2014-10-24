@@ -1,13 +1,15 @@
 body{
   background-color: $orange;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %container;
   position: relative;
+  
+  
+
 }
 
 html{
   box-sizing: border-box;
+  border-top: 1px solid black;
 }
 
 *, *:before, *:after {
@@ -67,6 +69,20 @@ footer{
       @include col(2, 4, omega);
     }
   }
+}
+
+.faq{
+  margin-top: 4em;
+  display:block;
+  float:left;
+  border-top: .3em solid black;
+
+    
+    p{
+       -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    }
 }
 
 header{
@@ -153,7 +169,16 @@ header{
 }
 
 .author{
-  @include col(2, 4, omega);
+  @include col(1, 1, omega);
+  text-align: right;
+  
+  @include breakpoint(43.750em){
+    @include col(1, 2, omega);
+    text-align: left;
+  }
+  @include breakpoint(62.500em){
+    @include col(2, 4, omega);
+  }
   margin-top: 0;
   margin-bottom: 3em;
 }

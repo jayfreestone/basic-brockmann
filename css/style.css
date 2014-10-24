@@ -1,3 +1,8 @@
+body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .container, .row {
   *zoom: 1; }
   .container:before, .row:before, .container:after, .row:after {
@@ -8,13 +13,11 @@
 
 body {
   background-color: #FF512F;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   position: relative; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border-top: 1px solid black; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -69,6 +72,18 @@ footer {
       .docs pre {
         width: 48.9898742803%;
         float: right; } }
+
+.faq {
+  margin-top: 4em;
+  display: block;
+  float: left;
+  border-top: .3em solid black; }
+  .faq p {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2; }
 
 header {
   width: 100%;
@@ -147,10 +162,20 @@ header {
       margin-right: 0; } }
 
 .author {
-  width: 48.9898742803%;
+  width: 100%;
   float: right;
+  text-align: right;
   margin-top: 0;
   margin-bottom: 3em; }
+  @media only screen and (min-width: 43.75em) {
+    .author {
+      width: 47.9380928518%;
+      float: right;
+      text-align: left; } }
+  @media only screen and (min-width: 62.5em) {
+    .author {
+      width: 48.9898742803%;
+      float: right; } }
 
 .intro {
   width: 100%;
@@ -206,6 +231,12 @@ a {
 code {
   font-family: "source-code-pro";
   font-size: .9em; }
+
+pre {
+  background-color: black;
+  color: #FF512F;
+  padding: 1em;
+  font-size: 80%; }
 
 ::selection {
   background-color: #FF512F; }
