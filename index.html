@@ -17,8 +17,12 @@
 	</head>
 
 	<body>
+	 
+  <div class="grid-toggle">
+	  <div id="eye"></div>
+  </div>
 	 <div class="overlay">
-    	<div class="overlay__columns">
+    	<div id="overlay__columns">
     	  <div class="col"></div>
     	  <div class="col"></div>
     	  <div class="col"></div>
@@ -133,6 +137,20 @@ aside {
     <footer><img width="18px" src="logo.svg" alt="Jay Freestone's personal mark" /><a href="http://www.jayfreestone.com">Jay Freestone</a> is a Graphic Designer & Front End Developer in London.</footer>  
  
   </div>
+  
+  <script type="text/javascript">
+  window.onload = init;
+  function init()
+  {
+      document.getElementById('eye').onclick  = toggleGrid;
+  }
+  
+  function toggleGrid()
+  {
+      document.querySelector('#overlay__columns').classList.toggle('hide');
+      document.querySelector('#eye').classList.toggle('closed');
+  }
+  </script>
 
   </body>
 </html>

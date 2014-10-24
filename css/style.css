@@ -89,10 +89,37 @@ header {
   width: 100%;
   float: right; }
 
-.overlay__columns {
+#overlay__columns {
   height: 100%;
   outline: 1px solid #ff8871;
-  outline-offset: -1px; }
+  outline-offset: -1px;
+  position: relative; }
+  #overlay__columns.hide {
+    outline: 0; }
+    #overlay__columns.hide .col {
+      display: none; }
+
+.grid-toggle {
+  position: absolute;
+  margin: 2em 2em;
+  padding: 0; }
+  @media only screen and (min-width: 62.5em) {
+    .grid-toggle {
+      margin: 3em 4em; } }
+
+#eye {
+  position: absolute;
+  top: -1.2em;
+  left: -1.2em;
+  background-image: url("/eye.png");
+  width: 66px;
+  height: 66px;
+  background-size: 100%;
+  display: block;
+  transition: all .5s ease-in-out;
+  cursor: pointer; }
+  #eye.closed {
+    background-image: url("/eye-closed.png"); }
 
 .overlay {
   width: 100%;
@@ -101,11 +128,10 @@ header {
   float: right;
   margin-right: 0;
   position: absolute;
-  pointer-events: none;
-  z-index: -1000;
   bottom: 0;
   top: 0;
-  padding: 2em 2em; }
+  padding: 2em 2em;
+  z-index: -1; }
   @media only screen and (min-width: 62.5em) {
     .overlay {
       padding: 3em 4em; } }

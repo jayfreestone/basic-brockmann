@@ -20,6 +20,7 @@ html{
   @extend %clearfix;
   padding: 2em 2em;
   
+  
   @include breakpoint(62.500em){
     padding: 3em 4em;
   }
@@ -93,21 +94,58 @@ header{
   @extend %clearfix;
 }
 
-.overlay__columns{
+#overlay__columns{
     height: 100%;
     outline: 1px solid lighten($orange, 13%);
     outline-offset: -1px;
+    position:relative;
+    
+    
+    &.hide {
+      .col{
+        display: none;
+        
+      }
+      outline: 0;
+    }
+}
+
+.grid-toggle{
+  position:absolute;
+  margin: 2em 2em;
+  padding:0;
+  
+  @include breakpoint(62.500em){
+    margin: 3em 4em;
+  }
+}
+
+#eye{
+  position: absolute;
+  top:-1.2em;
+  left: -1.2em;
+  background-image:url("/eye.png");
+  width: 66px;
+  height: 66px;
+  background-size: 100%;
+  display:block;
+  transition:all .5s ease-in-out;
+  cursor: pointer;
+  
+  &.closed{
+    background-image:url("/eye-closed.png");
+  }
 }
 
 .overlay{
   @include col(4);
   @include omega;
   position: absolute;
-  pointer-events: none;
-  z-index: -1000;
   bottom: 0;
   top: 0;
   padding: 2em 2em;
+  z-index: -1;
+
   
   @include breakpoint(62.500em){
     padding: 3em 4em;
@@ -118,6 +156,7 @@ header{
   height: 100%;
   border: 1px solid lighten($orange, 13%);
   display: none;
+  
   
   &:first-of-type{
     display:block;
