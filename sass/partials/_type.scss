@@ -11,12 +11,17 @@
 }
 
 html{
-  font-size: 1.667em;
+  font-size: 50%;
+  
+  @include breakpoint(62.500em){
+    font-size: 62.5%;
+  }
 }
 
 body{
   font-family: "aktiv-grotesk-std",sans-serif; 
   line-height: 1.3;
+  font-size: 2.700em;
 }
 
 h1{
@@ -41,6 +46,7 @@ a{
 code{
   font-family: "source-code-pro";
   font-size: .9em;
+
 }
 
 ::selection{

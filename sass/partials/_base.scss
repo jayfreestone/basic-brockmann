@@ -14,14 +14,21 @@ html{
   box-sizing: inherit;
 }
 
-.container, footer{
-  @include rem(padding, 3, 4);
+.container{
   @extend %clearfix;
+  padding: 2em 2em;
+  
+  @include breakpoint(62.500em){
+    padding: 3em 4em;
+  }
 }
 
 footer{
   font-size: 80%;
-  
+  margin-top: 6em;
+  display:block;
+  float:left;
+    
   img{
     width: .75em;
     margin-bottom: -.05em;
@@ -39,12 +46,13 @@ footer{
   
   p{
     @include col(4, 4, omega);
+    clear:left;
     
-    @include breakpoint(700px){
+    @include breakpoint(43.750em){
       @include col(1, 2);
     }
     
-    @include breakpoint(1000px){
+    @include breakpoint(62.500em){
       @include col(2, 4);
     }
   }
@@ -52,10 +60,10 @@ footer{
   pre{
     @include col(4, 4, omega);
     
-    @include breakpoint(700px){
+    @include breakpoint(43.750em){
       @include col(1, 2, omega);
     }
-    @include breakpoint(1000px){
+    @include breakpoint(62.500em){
       @include col(2, 4, omega);
     }
   }
@@ -78,12 +86,16 @@ header{
 .overlay{
   @include col(4);
   @include omega;
-  @include rem(padding, 3em, 4em);
   position: absolute;
   pointer-events: none;
   z-index: -1000;
   bottom: 0;
   top: 0;
+  padding: 2em 2em;
+  
+  @include breakpoint(62.500em){
+    padding: 3em 4em;
+  }
 }
 
 .col{
@@ -97,7 +109,7 @@ header{
     @include omega;
   }
 
-  @include breakpoint(700px){
+  @include breakpoint(43.750em){
     @include col(1);
     display: block;
     
@@ -112,12 +124,12 @@ header{
       @include omega;
     }
     
-    &:nth-of-type(3n){
+    &:nth-of-type(3n),&:nth-of-type(4n){
       display: none;
     }
   }
   
-  @include breakpoint(1000px){
+  @include breakpoint(62.500em){
     
     &:first-of-type{
       display:block;
@@ -147,16 +159,13 @@ header{
 }
 
 .intro{
-  @include col(1, 1);
-  @include omega;
+  @include col(1, 1, omega);
   
-  @include breakpoint(700px){
-    @include col(1, 2);
-    @include omega;
+  @include breakpoint(43.750em){
+    @include col(1, 2, omega);
   }
   
-  @include breakpoint(1000px){
-    @include col(2);
-    @include omega;
+  @include breakpoint(62.500em){
+    @include col(2, 4, omega);
   }
 }

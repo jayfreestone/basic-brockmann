@@ -1,9 +1,9 @@
-.container, footer, .row {
+.container, .row {
   *zoom: 1; }
-  .container:before, footer:before, .row:before, .container:after, footer:after, .row:after {
+  .container:before, .row:before, .container:after, .row:after {
     content: " ";
     display: table; }
-  .container:after, footer:after, .row:after {
+  .container:after, .row:after {
     clear: both; }
 
 body {
@@ -19,12 +19,17 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.container, footer {
-  padding: 48px 64px;
-  padding: 3rem 4rem; }
+.container {
+  padding: 2em 2em; }
+  @media only screen and (min-width: 62.5em) {
+    .container {
+      padding: 3em 4em; } }
 
 footer {
-  font-size: 80%; }
+  font-size: 80%;
+  margin-top: 6em;
+  display: block;
+  float: left; }
   footer img {
     width: .75em;
     margin-bottom: -.05em;
@@ -41,13 +46,14 @@ footer {
   float: right; }
   .docs p {
     width: 100%;
-    float: right; }
-    @media only screen and (min-width: 700px) {
+    float: right;
+    clear: left; }
+    @media only screen and (min-width: 43.75em) {
       .docs p {
         width: 47.9380928518%;
         margin-right: 2.0202514394%;
         float: left; } }
-    @media only screen and (min-width: 1000px) {
+    @media only screen and (min-width: 62.5em) {
       .docs p {
         width: 48.9898742803%;
         margin-right: 2.0202514394%;
@@ -55,11 +61,11 @@ footer {
   .docs pre {
     width: 100%;
     float: right; }
-    @media only screen and (min-width: 700px) {
+    @media only screen and (min-width: 43.75em) {
       .docs pre {
         width: 47.9380928518%;
         float: right; } }
-    @media only screen and (min-width: 1000px) {
+    @media only screen and (min-width: 62.5em) {
       .docs pre {
         width: 48.9898742803%;
         float: right; } }
@@ -79,13 +85,15 @@ header {
   float: left;
   float: right;
   margin-right: 0;
-  padding: 48px 64px;
-  padding: 3rem 4rem;
   position: absolute;
   pointer-events: none;
   z-index: -1000;
   bottom: 0;
-  top: 0; }
+  top: 0;
+  padding: 2em 2em; }
+  @media only screen and (min-width: 62.5em) {
+    .overlay {
+      padding: 3em 4em; } }
 
 .col {
   height: 100%;
@@ -98,7 +106,7 @@ header {
     float: left;
     float: right;
     margin-right: 0; }
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 43.75em) {
     .col {
       width: 23.4848114205%;
       margin-right: 2.0202514394%;
@@ -116,9 +124,9 @@ header {
         float: left;
         float: right;
         margin-right: 0; }
-      .col:nth-of-type(3n) {
+      .col:nth-of-type(3n), .col:nth-of-type(4n) {
         display: none; } }
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 62.5em) {
     .col:first-of-type {
       display: block;
       width: 23.4848114205%;
@@ -146,24 +154,15 @@ header {
 
 .intro {
   width: 100%;
-  margin-right: 2.0202514394%;
-  float: left;
-  float: right;
-  margin-right: 0; }
-  @media only screen and (min-width: 700px) {
+  float: right; }
+  @media only screen and (min-width: 43.75em) {
     .intro {
       width: 47.9380928518%;
-      margin-right: 2.0202514394%;
-      float: left;
-      float: right;
-      margin-right: 0; } }
-  @media only screen and (min-width: 1000px) {
+      float: right; } }
+  @media only screen and (min-width: 62.5em) {
     .intro {
       width: 48.9898742803%;
-      margin-right: 2.0202514394%;
-      float: left;
-      float: right;
-      margin-right: 0; } }
+      float: right; } }
 
 * {
   text-rendering: optimizeLegibility; }
@@ -176,11 +175,15 @@ header {
   -o-font-smoothing: antialiased; }
 
 html {
-  font-size: 1.667em; }
+  font-size: 50%; }
+  @media only screen and (min-width: 62.5em) {
+    html {
+      font-size: 62.5%; } }
 
 body {
   font-family: "aktiv-grotesk-std",sans-serif;
-  line-height: 1.3; }
+  line-height: 1.3;
+  font-size: 2.700em; }
 
 h1 {
   width: 100%;
