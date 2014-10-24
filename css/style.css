@@ -111,7 +111,7 @@ header {
   position: absolute;
   top: -1.2em;
   left: -1.2em;
-  background-image: url("/eye.png");
+  background-image: url("../eye.png");
   width: 66px;
   height: 66px;
   background-size: 100%;
@@ -119,7 +119,7 @@ header {
   transition: all .5s ease-in-out;
   cursor: pointer; }
   #eye.closed {
-    background-image: url("/eye-closed.png"); }
+    background-image: url("../eye-closed.png"); }
 
 .overlay {
   width: 100%;

@@ -124,7 +124,7 @@ header{
   position: absolute;
   top:-1.2em;
   left: -1.2em;
-  background-image:url("/eye.png");
+  background-image:url("../eye.png");
   width: 66px;
   height: 66px;
   background-size: 100%;
@@ -133,7 +133,7 @@ header{
   cursor: pointer;
   
   &.closed{
-    background-image:url("/eye-closed.png");
+    background-image:url("../eye-closed.png");
   }
 }
 
