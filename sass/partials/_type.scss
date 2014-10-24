@@ -27,8 +27,16 @@ body{
 h1{
   @include col(4);
   @include omega;
-  font-size: 4em;
+  font-size: 2em;
   line-height: 1.3;
+  
+  @include breakpoint(40em){
+    font-size: 3em;
+  }
+  
+  @include breakpoint(60em){
+    font-size: 4em;
+  }
 }
 
 p, pre{
@@ -54,6 +62,8 @@ pre {
   color: $orange;
   padding: 1em;
   font-size: 80%;
+  overflow: scroll;
+
 }
 
 ::selection{

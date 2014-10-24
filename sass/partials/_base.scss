@@ -18,8 +18,11 @@ html{
 
 .container{
   @extend %clearfix;
-  padding: 2em 2em;
+  padding: .5em .5em;
   
+  @include breakpoint(40em){
+    padding: 2em 2em;
+  }
   
   @include breakpoint(62.500em){
     padding: 3em 4em;
@@ -77,13 +80,17 @@ footer{
   display:block;
   float:left;
   border-top: .3em solid black;
-
-    
+  
+  @include breakpoint(62.500em){
     p{
        -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
     }
+  }
+
+    
+
 }
 
 header{
@@ -96,9 +103,13 @@ header{
 
 #overlay__columns{
     height: 100%;
-    outline: 1px solid lighten($orange, 13%);
+    
     outline-offset: -1px;
     position:relative;
+    
+     @include breakpoint(43.750em){
+       outline: 1px solid lighten($orange, 13%);
+    }
     
     
     &.hide {
@@ -120,7 +131,8 @@ header{
   }
 }
 
-#eye{
+@include breakpoint(43.750em){
+  #eye{
   position: absolute;
   top:-1.2em;
   left: -1.2em;
@@ -136,6 +148,8 @@ header{
     background-image:url("../eye-closed.png");
   }
 }
+}
+
 
 .overlay{
   @include col(4);
@@ -143,26 +157,24 @@ header{
   position: absolute;
   bottom: 0;
   top: 0;
-  padding: 2em 2em;
   z-index: -1;
-
+  padding: .5em .5em;
+  
+  @include breakpoint(40em){
+    padding: 2em 2em;
+  }
   
   @include breakpoint(62.500em){
     padding: 3em 4em;
   }
+  
+
 }
 
 .col{
   height: 100%;
   border: 1px solid lighten($orange, 13%);
   display: none;
-  
-  
-  &:first-of-type{
-    display:block;
-    @include col(1, 1);
-    @include omega;
-  }
 
   @include breakpoint(43.750em){
     @include col(1);
@@ -210,16 +222,19 @@ header{
 .author{
   @include col(1, 1, omega);
   text-align: right;
+  margin-top: 0;
+  margin-bottom: 1em;
+ 
   
   @include breakpoint(43.750em){
     @include col(1, 2, omega);
     text-align: left;
+    margin-bottom: 3em;
   }
   @include breakpoint(62.500em){
     @include col(2, 4, omega);
   }
-  margin-top: 0;
-  margin-bottom: 3em;
+  
 }
 
 .intro{

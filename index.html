@@ -50,8 +50,7 @@
     <pre><code>$max-width: 1360px;  
 $column-width: 6.38298%;  
 $gutter-width: 2.12766%;  
-$maximum-columns: 12;
-    </code></pre>
+$maximum-columns: 12;</code></pre>
   </div>
   
   <div class="docs__usage">
@@ -62,8 +61,7 @@ $maximum-columns: 12;
       
       <pre><code>.container {  
   @extend %container;  
-}
-      </code></pre>
+}</code></pre>
     </div>
     
     <div class="row">
@@ -71,8 +69,7 @@ $maximum-columns: 12;
       
       <pre><code>main {  
   @include col(8);  
-}
-      </code></pre>
+}</code></pre>
     </div>
     
     <p>By default <code>col</code> will assume the parent element contains the maxium number of columns specificed in <code>$maximum-columns</code> — in this example 12. If you are nesting elements and wish to instead declare how many columns the parent has you may pass in a second number:</p>
@@ -80,8 +77,7 @@ $maximum-columns: 12;
     <div class="row">
       <pre><code>aside {  
   @include col(2, 6);  
-}
-      </code></pre>
+}</code></pre>
       
       <p>This translates to: ‘span two of six columns’.</p>
     </div>
@@ -99,8 +95,7 @@ $maximum-columns: 12;
 aside {  
   @include col(2, 6);  
   @include omega;  
-}
-      </code></pre>
+}</code></pre>
       
       <p>The first is prefferable as it avoids outputting CSS that will be rewritten.</p>
       
@@ -110,8 +105,7 @@ aside {
     <h3>Push</h3>
     <p>You can break the flow with the <code>push</code> mixin.</p>
 
-<pre><code>@include push(left, 1);
-</code></pre>
+<pre><code>@include push(left, 1);</code></pre>
 
 <p>The example above will ‘push’ the element one column from the left to the right, essentially adding a left margin equivalent to one column and gutter.</p>
     </div>
