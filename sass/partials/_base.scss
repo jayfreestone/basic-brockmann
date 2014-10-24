@@ -4,8 +4,6 @@ body{
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  // Temp until page longer
-  min-height: 1000px;
 }
 
 html{
@@ -16,9 +14,20 @@ html{
   box-sizing: inherit;
 }
 
-.container{
-  padding: 3em 4em;
+.container, footer{
+  @include rem(padding, 3, 4);
   @extend %clearfix;
+}
+
+footer{
+  font-size: 80%;
+  
+  img{
+    width: .75em;
+    margin-bottom: -.05em;
+    margin-right: .2em;
+    margin-left: .1em;
+  }
 }
 
 .subtitle{
@@ -52,14 +61,6 @@ html{
   }
 }
 
-.docs__setup{
-  
-}
-
-.docs__usage{
-  
-}
-
 header{
   @include col(4, 4, omega);
 }
@@ -77,8 +78,7 @@ header{
 .overlay{
   @include col(4);
   @include omega;
-//   border: 1px solid lighten($orange, 25%);
-  padding: 3em 4em; 
+  @include rem(padding, 3em, 4em);
   position: absolute;
   pointer-events: none;
   z-index: -1000;

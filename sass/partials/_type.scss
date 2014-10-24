@@ -10,9 +10,12 @@
   -o-font-smoothing:antialiased;
 }
 
-body{
-  font-family: "aktiv-grotesk-std",sans-serif;
+html{
   font-size: 1.667em;
+}
+
+body{
+  font-family: "aktiv-grotesk-std",sans-serif; 
   line-height: 1.3;
 }
 
@@ -23,11 +26,9 @@ h1{
   line-height: 1.3;
 }
 
-/*
-h2{
-  margin-bottom: 5em;
+p, pre{
+  @include rem(margin, 1, 0, 1);
 }
-*/
 
 a{
   color: black;
@@ -40,4 +41,8 @@ a{
 code{
   font-family: "source-code-pro";
   font-size: .9em;
+}
+
+::selection{
+  background-color: $orange;
 }
