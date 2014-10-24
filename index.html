@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>The Basic Brockmann</title>
+		<title>The Basic Brockmann SASS Grid</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A set of basic grid mixins written in SASS, for use with Libsass, owing to Steve Hickey.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css" title="Main CSS" type="text/css" media="screen" charset="utf-8">
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:description" content="A set grid mixins for use with Libsass. Brockmann is designed to be super lightweight and incredibly easy to understand. Say goodbye to bloated frameworks." />
+		<meta name="twitter:title" content="The Basic Brockmann SASS Grid" />
+		<meta name="twitter:url" content="http://jayfreestone.github.io/basic-brockmann/" />
+		<meta name="twitter:image" content="http://jayfreestone.github.io/basic-brockmann/apple-touch-icon.png" />
 		<script src="//use.typekit.net/wyq5jza.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
 	</head>
@@ -28,6 +33,13 @@
   	          <p class="intro">A set of basic grid mixins written in <a href="http://sass-lang.com/">SASS</a>, for use with <a href="https://github.com/sass/libsass">Libsass</a>, owing to <a href="http://stevehickeydesign.com">Steve Hickey.</a></p>
   	    </header>
 <div class="docs">
+<div class="row">
+  <h2>Install</h2>
+
+<p>You can <a href="https://github.com/jayfreestone/basic-brockmann/archive/master.zip">download Brockmann</a>, <a href="https://github.com/jayfreestone/basic-brockmann">clone the repo</a> or install it using <a href="http://bower.io">Bower</a>.</p>
+<pre><code>bower install the-basic-brockmann
+</code></pre>
+</div>
   <div class="docs__setup row">
     <h2 >Setup</h2>
     <p>Include <code>_grid.scss</code> &amp; <code>_mixins.scss</code> in your project, then declare these variables in a preceeding file:</p>
@@ -71,6 +83,7 @@ $maximum-columns: 12;
     </div>
     
     <div class="row">
+    <h3>Omega</h3>
       <p>The final column in a row must be declared by passing in the <code>omega</code> flag, or optionally using the <code>omega</code> mixin:</p>
       
       <pre><code>aside {  
@@ -89,8 +102,34 @@ aside {
       
       <p>Currently when passing in the <code>omega</code> flag the parent needs to be declared, ensuing <code>omega</code> is the last option passed into the mixin. This would, for instance, not be valid: <code>@include col(2, omega)</code>.</p>
     </div>
+    <div class="row">
+    <h3>Push</h3>
+    <p>You can break the flow with the <code>push</code> mixin.</p>
+
+<pre><code>@include push(left, 1);
+</code></pre>
+
+<p>The example above will ‘push’ the element one column from the left to the right, essentially adding a left margin equivalent to one column and gutter.</p>
+    </div>
        </div>
+       
+
+       
   </div>
+           <div class="faq">
+       <h2>FAQ</h2>
+       <h3 id="howdoiworkoutthevalues">How do I work out the % values?</h3>
+
+<p>You’re currently on your own here. At the moment Brockmann doesn’t handle the original grid calculations. There are, however, a bunch of grid calculators out there, including <a href="https://gridsetapp.com">Gridset</a>.</p>
+
+<h3 id="asymmetry">Asymmetry?</h3>
+
+<p>Not yet, although this is something I’m interested in exploring.</p>
+
+<h3 id="whyshouldiusebrockmann">Why should I use Brockmann?</h3>
+
+<p>Because you’re using Libsass, which (at the time of writing) rules out the two well established SASS based grid systems, <a href="http://susy.oddbird.net">Susy</a> and <a href="http://neat.bourbon.io">Neat</a>. Brockmann is designed to be <em>super</em> lightweight and incredibly easy to understand. It’s not a comprehensive system. It’s a set of transparent and reusable mixins that let you built out a pre-conceived grid quickly.</p>
+       </div>
     <footer><img width="18px" src="logo.svg" alt="Jay Freestone's personal mark" /><a href="http://www.jayfreestone.com">Jay Freestone</a> is a Graphic Designer & Front End Developer in London.</footer>  
  
   </div>
