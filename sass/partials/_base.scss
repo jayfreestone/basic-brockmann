@@ -82,18 +82,7 @@ footer{
   margin-top: 4em;
   display:block;
   float:left;
-  border-top: .3em solid black;
-  
-  @include breakpoint(62.500em){
-    p{
-       -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-    }
-  }
-
-    
-
+  border-top: .3em solid black;   
 }
 
 header{

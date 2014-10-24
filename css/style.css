@@ -82,13 +82,6 @@ footer {
   display: block;
   float: left;
   border-top: .3em solid black; }
-  @media only screen and (min-width: 62.5em) {
-    .faq p {
-      -webkit-column-count: 2;
-      /* Chrome, Safari, Opera */
-      -moz-column-count: 2;
-      /* Firefox */
-      column-count: 2; } }
 
 header {
   width: 100%;
