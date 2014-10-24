@@ -44,7 +44,10 @@ footer{
 }
 
 .subtitle{
-  @include col(2);
+  @include breakpoint(43.750em){
+     @include col(2);
+  }
+    
 }
 
 .docs{

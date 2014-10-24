@@ -42,10 +42,11 @@ footer {
     margin-right: .2em;
     margin-left: .1em; }
 
-.subtitle {
-  width: 48.9898742803%;
-  margin-right: 2.0202514394%;
-  float: left; }
+@media only screen and (min-width: 43.75em) {
+  .subtitle {
+    width: 48.9898742803%;
+    margin-right: 2.0202514394%;
+    float: left; } }
 
 .docs {
   width: 100%;
