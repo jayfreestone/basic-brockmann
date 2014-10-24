@@ -1,6 +1,6 @@
 {
   "name": "the-basic-brockmann",
-  "version": "0.2",
+  "version": "0.2.1",
   "main": [
     "grid/_grid.scss",
     "grid/_mixins.scss",
