@@ -1,6 +1,10 @@
 {
   "name": "the-basic-brockmann",
   "version": "0.2",
+  "main": [
+    "grid/_grid.scss",
+    "grid/_mixins.scss",
+  ],
   "ignore": [
     "sass",
     ".gitignore",
