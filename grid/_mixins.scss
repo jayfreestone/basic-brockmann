@@ -1,10 +1,13 @@
 //Grid Mixins & Container Placeholder
 @mixin col($columns, $maximum-columns:$maximum-columns, $omega:false) {  
   width: columns($columns, $maximum-columns); 
-
+  
   @if $omega == omega {
     float: right;
   }  
+  @else if $omega == 'none'{
+    margin-right: gutter();
+  }
   @else{
     margin-right: gutter();
     float: left;
@@ -18,11 +21,9 @@
 
 @mixin push($from-direction, $columns) {
   @if $from-direction == left {
-    float: left;
     margin-left: offset-columns($columns);
   }
   @if $from-direction == right {
-    float: right;
     margin-right: offset-columns($columns);
   }
 }
