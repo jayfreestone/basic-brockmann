@@ -22,19 +22,19 @@ Include `_grid.scss` & `_mixins.scss` in your project, then declare these variab
 Define the main container with the `%container` placeholder.
 
 	.container {
-	 @extend %container;
+		@extend %container;
 	}
 
 Then define the widths of elements with the `col` mixin.
 
 	main {
-	  @include col(8);
+	 	@include col(8);
 	}
 
 By default `col` will assume the parent element contains the maximum number of columns specified in `$maximum-columns` — in this example 12. If you are nesting elements and wish to instead declare how many columns the parent has you may pass in a second number:
 
 	aside {
-	  @include col(2, 6);
+		@include col(2, 6);
 	}
 
 This translates to: ‘span two of six columns’.
@@ -42,19 +42,21 @@ This translates to: ‘span two of six columns’.
 The final column in a row must be declared by passing in the `omega` flag, or optionally using the `omega` mixin:
 
 	aside {
-	  @include col(2, 6, omega);
+		@include col(2, 6, omega);
 	}
 	
 	// Or:
 	
 	aside {
-	 @include col(2, 6);
-	 @include omega;
+		@include col(2, 6);
+		@include omega;
 	}
 
 The first is preferable as it avoids outputting CSS that will be rewritten.
 
 Currently when passing in the `omega` flag the parent needs to be declared, ensuring `omega` is the last option passed into the mixin. This, for instance, would be invalid: `@include col(2, omega)`.
+
+The `omega` syntax can also take a third option: `none`. This outputs the width and margins without the floats (there is 'no' float). This is useful when collapsable margins are desirable, for instance when styling elements within an article body.
 
 You can break the flow with the `push` mixin.
 
@@ -71,21 +73,21 @@ You’re currently on your own here. At the moment Brockmann doesn’t handle th
 You can wrap your styles in a simple media query mixin: 
 
 	@mixin breakpoint($breakpoint) {
-	@media only screen and (min-width: $breakpoint) { @content; }
+		@media only screen and (min-width: $breakpoint) { @content; }
 	}  
 
 And then just redeclare the `col` mixin when needed:
 
 	.intro{
-	  @include col(1, 1, omega);
+		@include col(1, 1, omega);
 	
-	  @include breakpoint(43.750em){
-	@include col(1, 2, omega);
-	  }
+ 		@include breakpoint(43.750em){
+			@include col(1, 2, omega);
+  		}
 	  
-	  @include breakpoint(62.500em){
-	@include col(2, 4, omega);
-	  }
+		@include breakpoint(62.500em){
+			@include col(2, 4, omega);
+	  	}
 	}
 
 ### Asymmetry?
