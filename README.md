@@ -1,6 +1,6 @@
 # The Basic Brockmann
 
-A super basic grid framework based off of [Steve Hickey](http://stevehickeydesign.com/)'s own [flexible grid](http://www.slideshare.net/stevehickeydsgn/forget-frameworks-create-your-own-flexible-grid-system). Personally I love [Susy](http://susy.oddbird.net/), but it’s currently tied to the featureset of SASS 3.3+, which [Libsass](https://github.com/sass/libsass) hasn’t yet caught up to. On a recent project I found compiling all my partial files took upwards of 5 seconds. Not wanting to have to add a bunch of compiled partial CSS files to my development site (and then strip them out for production) I switched compilers.
+A super basic grid framework based off of [Steve Hickey](http://stevehickeydesign.com/)'s own [flexible grid](http://www.slideshare.net/stevehickeydsgn/forget-frameworks-create-your-own-flexible-grid-system). ~~Personally I love [Susy](http://susy.oddbird.net/), but it’s currently tied to the featureset of SASS 3.3+, which [Libsass](https://github.com/sass/libsass) hasn’t yet caught up to~~ (*Susy now supports libsass*). On a recent project I found compiling all my partial files took upwards of 5 seconds. Not wanting to have to add a bunch of compiled partial CSS files to my development site (and then strip them out for production) I switched compilers.
 
 Unfortunately this necessitated the need for a new (basic) grid system. Unlike Susy it doesn’t (yet?) do the initial math for column and gutter percentages. What it does allow me to do is get up and running with a basic layout quickly and easily, and allow me to make use of Libsass without going back to v1 of [Neat](http://neat.bourbon.io/).
 
@@ -94,4 +94,4 @@ And then just redeclare the `col` mixin when needed:
 Not yet, although this is something I’m interested in exploring.
 
 ### Why should I use Brockmann?
-Because you’re using Libsass, which (at the time of writing) rules out the two well established SASS based grid systems, [Susy](http://susy.oddbird.net) and [Neat](http://neat.bourbon.io). Brockmann is designed to be *super* lightweight and incredibly easy to understand. It’s not a comprehensive system. It’s a set of transparent and reusable mixins that let you built out a pre-conceived grid quickly.
+~~Because you’re using Libsass, which (at the time of writing) rules out the two well established SASS based grid systems, [Susy](http://susy.oddbird.net) and [Neat](http://neat.bourbon.io).~~ You should use Brockmann as it's *super* lightweight and incredibly easy to understand. It’s not a comprehensive system. It’s a set of transparent and reusable mixins that let you built out a pre-conceived grid quickly.
